@@ -1819,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2ffaff;
+  background: #4e534f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1940,8 +1940,9 @@ pre .javascript .function {
   color: #fc6423;
 }
 .footer {
-  font-size: 14px;
-  color: #999;
+  font-size: 16px;
+  color: $black;
+  font-weight: bold;
 }
 .footer img {
   border: none;
