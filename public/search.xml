@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Welcome</title>
-    <url>/2021/06/04/%E4%BD%A0%E5%A5%BD/</url>
-    <content><![CDATA[<h1 id="你好呀"><a href="#你好呀" class="headerlink" title="你好呀"></a>你好呀</h1><h2 id="欢迎来到我的博客"><a href="#欢迎来到我的博客" class="headerlink" title="欢迎来到我的博客"></a>欢迎来到我的博客</h2><span id="more"></span>
-
-<figure class="highlight c"><figcaption><span>C</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Welcome to my Blog!&quot;</span>);</span><br><span class="line">    retrun <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> namespcae std;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout&lt;&lt;<span class="string">&quot;Welcome to my Blog!&quot;</span>;</span><br><span class="line">    retrun <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><figcaption><span>Python</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Welcome to my Blog&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><figcaption><span>Javascript</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;Welcome to my Blog&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><figcaption><span>Shell</span></figcaption><table><tr><td class="code"><pre><span class="line">echo Welcome to my Blog</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>蓝色降落伞</title>
     <url>/2021/06/04/%E8%93%9D%E8%89%B2%E9%99%8D%E8%90%BD%E4%BC%9E/</url>
     <content><![CDATA[<p>打开窗穿过走廊，下起雨来的弄堂</p>
