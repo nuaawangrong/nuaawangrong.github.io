@@ -87,7 +87,7 @@
 <meta property="og:description" content="写在前面第一次接触Vim是在大一的时候，计算机导论实验课，需要写python的程序，实验环境在实验楼的虚拟机里。第一节课就是熟悉Linux操作的Vim的编辑，仍然记得Vim进入后无法退出的场景，不禁直呼这软件设计是如此反人类！！！hhhhhhh不过后面又继续敲代码，在自己的电脑上装虚拟机，买了自己的服务器，又不得不继续和Vim打交道。时不时的就得找找Vim的命令，但是掌握的命令多了起来之后，发现，">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-06-08T15:54:43.000Z">
-<meta property="article:modified_time" content="2021-06-08T16:47:06.591Z">
+<meta property="article:modified_time" content="2021-06-09T15:25:33.085Z">
 <meta property="article:author" content="qingfengchui">
 <meta property="article:tag" content="Vim">
 <meta name="twitter:card" content="summary">
@@ -336,7 +336,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2021-06-09T00:47:06+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2021-06-09T23:25:33+08:00">
                 2021-06-09
               </time>
             
@@ -375,7 +375,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  496
+                  1k
                 </span>
               
 
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -414,14 +414,140 @@
       
         <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>第一次接触Vim是在大一的时候，计算机导论实验课，需要写python的程序，实验环境在实验楼的虚拟机里。第一节课就是熟悉Linux操作的Vim的编辑，仍然记得Vim进入后无法退出的场景，不禁直呼这软件设计是如此反人类！！！hhhhhhh<br>不过后面又继续敲代码，在自己的电脑上装虚拟机，买了自己的服务器，又不得不继续和Vim打交道。时不时的就得找找Vim的命令，但是掌握的命令多了起来之后，发现，诶，其实也还挺好用的嘛。嗯，真香！！！<br>不过Vim命令太多，只能说不常用就会忘记，写这样一篇笔记，也是为了方便加深Vim命令的印象，能提高Vim的使用效率吧。</p>
 <span id="more"></span>
-<h2 id="初识Vim"><a href="#初识Vim" class="headerlink" title="初识Vim"></a>初识Vim</h2><p><code>Vim</code>其实就是一个文本编辑器，类似于<code>VScode</code>和<code>Notepade++</code>,但<code>Vim</code>和其他的编辑器不一样，有着三种模式和命令操作，强大的模式加命令组合可以使得用户少用甚至不用鼠标，可以更专注于文本的处理，有着更流畅的工作节奏。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
+<h1 id="初识Vim"><a href="#初识Vim" class="headerlink" title="初识Vim"></a>初识Vim</h1><p><code>Vim</code>其实就是一个文本编辑器，类似于<code>VScode</code>和<code>Notepade++</code>,但<code>Vim</code>和其他的编辑器不一样，有着三种模式和命令操作，强大的模式加命令组合可以使得用户少用甚至不用鼠标，可以更专注于文本的处理，有着更流畅的工作节奏。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
 <li>Linux <figure class="highlight shell"><figcaption><span>shell</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> http://github.com/vim/vim.git</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> vim/src</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> make</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br></pre></td></tr></table></figure></li>
 <li>windows<br> 下载<code>gVim</code>软件，按提示安装即可。</li>
 </ol>
 <p>安装完成后使用命令<code>vim --version</code>查看<code>Vim</code>版本，验证是否安装成功。</p>
-<h3 id="通过-vimrc文件配置Vim"><a href="#通过-vimrc文件配置Vim" class="headerlink" title="通过.vimrc文件配置Vim"></a>通过<code>.vimrc</code>文件配置<code>Vim</code></h3><p>有的可能不是隐藏文件，需要根据具体环境具体配置。</p>
+<h2 id="通过-vimrc文件配置Vim"><a href="#通过-vimrc文件配置Vim" class="headerlink" title="通过.vimrc文件配置Vim"></a>通过<code>.vimrc</code>文件配置<code>Vim</code></h2><p>系统配置下不是隐藏文件，可通过<code>find . -name | grep vimrc</code>命令查找。<br>用户配置下为隐藏文件，通常位于用户主目录下，可能需要自行创建。</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span>                      <span class="comment">&quot; 支持语法高亮</span></span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span>      <span class="comment">&quot; 启用根据文件类型自动缩进</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> autoindent                 <span class="comment">&quot; 开始新行时处理缩进</span></span><br><span class="line"><span class="keyword">set</span> expandtab                  <span class="comment">&quot; 将制表符Tab展开为空格，对Python尤其有用</span></span><br><span class="line"><span class="keyword">set</span> tabstop=<span class="number">4</span>                  <span class="comment">&quot; 要计算的空格数 </span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span>               <span class="comment">&quot; 用于自动缩进的空格数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> backspace=<span class="number">2</span>                <span class="comment">&quot; 在多数终端上修正退格键Backspace的行为</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">colorscheme</span> murphy             <span class="comment">&quot; 修改配色</span></span><br></pre></td></tr></table></figure>
+<h2 id="常用操作命令"><a href="#常用操作命令" class="headerlink" title="常用操作命令"></a>常用操作命令</h2><ol>
+<li>打开并编辑文件（文件不存在则新建） <figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim <span class="keyword">new</span><span class="type"></span>.txt</span><br></pre></td></tr></table></figure></li>
+<li>按下编辑键<code>i</code>、<code>I</code>、<code>a</code>、<code>A</code>、<code>O</code>、<code>o</code>等进入编辑模式，此时与其他编辑器一样，可进行文本修改。</li>
+<li>按下<code>ESC</code>键，退出编辑模式。</li>
+<li>保存和关闭文件<code>: wq</code>，输入命令后按下<code>Enter</code>键。</li>
+<li>移动光标<table>
+<thead>
+<tr>
+<th align="center">按键</th>
+<th align="center">行为</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">h</td>
+<td align="center">向左移动</td>
+</tr>
+<tr>
+<td align="center">j</td>
+<td align="center">向上移动</td>
+</tr>
+<tr>
+<td align="center">k</td>
+<td align="center">向下移动</td>
+</tr>
+<tr>
+<td align="center">l</td>
+<td align="center">向右移动</td>
+</tr>
+<tr>
+<td align="center">w</td>
+<td align="center">逐个狭义单词移动</td>
+</tr>
+<tr>
+<td align="center">W</td>
+<td align="center">逐个广义单词移动</td>
+</tr>
+<tr>
+<td align="center">e</td>
+<td align="center">向前移动直到最近狭义单词的结尾</td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center">向前移动直到最近广义单词的结尾</td>
+</tr>
+<tr>
+<td align="center">b</td>
+<td align="center">向前移动到狭义单词的开头</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">向前移动到广义单词的开头</td>
+</tr>
+<tr>
+<td align="center">{</td>
+<td align="center">向前移动一个段落</td>
+</tr>
+<tr>
+<td align="center">}</td>
+<td align="center">向后移动一个段落</td>
+</tr>
+</tbody></table>
+</li>
+<li>修改命令<code>c</code>(可在删除一段文字后，立刻进入插入模式。是一个复合命令，在后面必须指定其他命令)<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">行为</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">c3e</td>
+<td align="center">删除三个单词（逗号视为一个单词）</td>
+</tr>
+<tr>
+<td align="center">cb</td>
+<td align="center">删除一个单词(光标处为结束的单词)</td>
+</tr>
+<tr>
+<td align="center">cw</td>
+<td align="center">删除一个单词(光标处为开始的狭义单词)</td>
+</tr>
+<tr>
+<td align="center">cW</td>
+<td align="center">删除一个单词(光标处为结束的广义单词)</td>
+</tr>
+</tbody></table>
+</li>
+<li><code>d</code>命令与<code>c</code>命令功能相似，只不过在实现删除后，不进入插入模式。</li>
+<li>删除一整行<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">行为</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">cc</td>
+<td align="center">清除整行，然后进入插入模式。保持当前的缩进水平。</td>
+</tr>
+<tr>
+<td align="center">dd</td>
+<td align="center">删除整行，不进入插入模式。</td>
+</tr>
+</tbody></table>
+</li>
+<li>撤销和重复<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>行为</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>u</td>
+<td>撤销最后一次操作</td>
+</tr>
+<tr>
+<td>Ctrl + r</td>
+<td>重做此操作</td>
+</tr>
+</tbody></table>
+</li>
+<li><code>Vim</code>手册<br><code>: help</code>：可快速进入<code>Vim</code>手册中。<br>若想了解某个命令例如<code>cc</code>命令可执行<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">:h</span> cc</span><br></pre></td></tr></table></figure>
+若未找到正确的词条，需要在按下回车键前按下<code>Ctrl + D</code>，从可选择的标签列表中选择正确的词条。</li>
+</ol>
+
       
     </div>
     
@@ -657,7 +783,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.6k</span>
+    <span title="Site words total count">2.9k</span>
   
 </div>
 
