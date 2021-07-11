@@ -201,6 +201,16 @@
 <h3 id="思路：-3"><a href="#思路：-3" class="headerlink" title="思路："></a>思路：</h3>使用栈来读取S的字符，当出现成对的括号时弹出括号里的字符，并存入队列中，再将其入栈，实现字符串的反转。<br>当匹配最外面的一层括号时，也会进行反转，所以最后一次需要反着读取栈中的字符。</li>
 </ul>
 <p>时间复杂度：O(n)，空间复杂度：O(n)。</p>
+<h2 id="日期：2021年7月11日"><a href="#日期：2021年7月11日" class="headerlink" title="日期：2021年7月11日"></a>日期：2021年7月11日</h2><h3 id="题目：-283-移动零"><a href="#题目：-283-移动零" class="headerlink" title="题目：[283] 移动零"></a>题目：[283] <a href="https://leetcode-cn.com/problems/move-zeroes/">移动零</a></h3><h3 id="描述：-4"><a href="#描述：-4" class="headerlink" title="描述："></a>描述：</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">给定一个数组nums，编写一个函数将所有0移动到数组的末尾，同时保持非零元素的相对顺序。</span><br></pre></td></tr></table></figure>
+
+<h3 id="示例：-4"><a href="#示例：-4" class="headerlink" title="示例："></a>示例：</h3><figure class="highlight accesslog"><table><tr><td class="code"><pre><span class="line">输入: <span class="string">[0,1,0,3,12]</span></span><br><span class="line">输出: <span class="string">[1,3,12,0,0]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明:"></a>说明:</h3><ol>
+<li>必须在原数组上操作，不能拷贝额外的数组。</li>
+<li>尽量减少操作次数。</li>
+</ol>
+<h3 id="解答：-4"><a href="#解答：-4" class="headerlink" title="解答："></a>解答：</h3><figure class="highlight c++"><figcaption><span>C++</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">//解法一：</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">moveZeroes</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> j=<span class="number">0</span>,temp;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]!=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                temp = nums[j];</span><br><span class="line">                nums[j]=nums[i];</span><br><span class="line">                nums[i] = temp;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="思路：-4"><a href="#思路：-4" class="headerlink" title="思路："></a>思路：</h3><p>使用两个辅助下标，下标j指向存放非零元素的位置，i下标指向当前的数组元素。<br>判断nums[i]是否为非零元素，是的话就交换nums[i]和nums[j]，并将j向右移动。<br>可以省略交换过程中的中间变量temp。但需要判断i和j是否相同。</p>
 ]]></content>
       <categories>
         <category>算法</category>
